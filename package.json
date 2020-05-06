@@ -1,16 +1,14 @@
 {
   "name": "le3-jam-starter",
   "scripts": {
-    "start": "run-s build serve",
-    "serve": "http-server ./dist",
-    "build": "run-s clean && run-p build:*",
+    "start": "run-s clean build eleventy",
+    "dev": "run-s watch",
+    "build": "cross-env NODE_ENV=production parcel build ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps",
     "watch": "run-s clean && run-p watch:*",
     "clean": "rimraf ./dist",
-    "build:html": "cross-env ELEVENTY_ENV=production eleventy",
-    "build:assets": "cross-env NODE_ENV=production parcel build ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps",
-    "watch:html": "cross-env ELEVENTY_ENV=development eleventy --serve",
-    "watch:assets": "cross-env ELEVENTY_ENV=development parcel watch ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps --no-hmr",
-    "dev": "run-s watch"
+    "eleventy": "cross-env ELEVENTY_ENV=production eleventy --serve",
+    "watch:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "watch:assets": "cross-env ELEVENTY_ENV=development parcel watch ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps --no-hmr"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
