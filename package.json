@@ -1,7 +1,7 @@
 {
   "name": "le3-eleventy-starter",
   "scripts": {
-    "start": "run-s build && http-server ./dist",
+    "start": "run-s build && http-server -c-1 ./dist",
     "watch": "run-s clean && cross-env ELEVENTY_ENV=development run-p watch:*",
     "build": "run-s clean && cross-env ELEVENTY_ENV=production run-p build:*",
     "clean": "rimraf ./dist",
