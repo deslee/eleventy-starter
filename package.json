@@ -8,7 +8,7 @@
     "watch:eleventy": "eleventy --serve",
     "watch:assets": "parcel watch ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps --no-hmr",
     "build:eleventy": "eleventy",
-    "build:assets": "parcel build ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps --no-hmr"
+    "build:assets": "parcel build ./src/assets/app.css ./src/assets/app.ts --out-dir ./dist/assets --no-source-maps"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",

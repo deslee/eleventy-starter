@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply flex items-center justify-center h-screen;
+}
+
 .content {
-  background: white;
+    h1 {
+        @apply text-6xl;
+    }
+
+    ul {
+        @apply pl-10 my-4;
+        li {
+            @apply list-disc;
+        }
+    }
 }
