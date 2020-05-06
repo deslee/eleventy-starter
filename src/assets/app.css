@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-    @apply flex items-center justify-center h-screen;
+    @apply h-screen flex flex-col justify-center;
+}
+
+.content-wrapper {
+    @apply flex items-center justify-center;
 }
 
 .content {
@@ -17,4 +21,9 @@ body {
             @apply list-disc;
         }
     }
+}
+
+#footer {
+    @apply mt-4;
+    text-align: center;
 }
