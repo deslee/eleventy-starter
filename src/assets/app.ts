@@ -17,7 +17,7 @@ const timeAgo = new TimeAgo('en-US')
 const date = new Date();
 
 setInterval(() => {
-    const footerText = `You loaded this page: ${timeAgo.format(date, { gradation: canonical })}`
+    const footerText = `This page was loaded ${timeAgo.format(date, { gradation: canonical })}`
     document.getElementById('footer').innerText = footerText;
 }, 1000)
  
