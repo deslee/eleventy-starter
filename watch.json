@@ -7,12 +7,12 @@
   },
   "restart": {
     "exclude": [
-      "^dist/",
-      "^src/"
+      "^dist/"
     ],
     "include": [
       "watch.json$",
-      ".eleventy.js$"
+      ".eleventy.js$",
+      "^src/"
     ]
   },
   "throttle": 1000
